@@ -1,0 +1,31 @@
+let collectionnft = [];
+
+function mintNFT(_shoename, _size, _brand, _prize) {
+    const sneaker = {
+        shoename: _shoename,
+        size: _size,
+        brand: _brand,
+        prize: _prize,
+    }
+    collectionnft.push(sneaker);
+}
+
+function listnfts() {
+    for(let i = 0; i < collectionnft.length; i++) {
+        console.log(collectionnft[i]);
+    }
+}
+
+function getTotalsupply () {
+    console.log("TOTAL NFT:" + collectionnft.length);
+}
+
+mintNFT("JORDAN1", 9, "JORDAN", 14.399);
+mintNFT("DUNKLOW", 9, "NIKE", 12.599);
+mintNFT("YEEZY", 8.5, "ADIDAS", 23.999);
+mintNFT("CHUCKTAYLOR", 8, "CONVERSE", 4.395);
+mintNFT("550", 8.5, "NEWBALANCE", 12.559);
+
+listnfts();
+
+getTotalsupply();
